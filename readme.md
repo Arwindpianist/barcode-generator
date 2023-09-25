@@ -35,7 +35,7 @@ git clone https://github.com/Arwindpianist/barcode-generator.git
 Run the `script.py` script to generate barcodes from the patient IDs:
 
 ```
-script.py
+python script.py
 ```
 
 
@@ -46,7 +46,7 @@ The generated barcode images will be saved in the `./output/` directory.
 Run the `arrange.py` script to arrange the generated barcodes into A4-sized sheets:
 
 ```
-arrange.py
+python arrange.py
 ```
 
 
