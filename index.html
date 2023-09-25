@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <script src="./JsBarcode.all.min.js"></script>
+    <title>Barcode Generator</title>
+</head>
+<body>
+    <div id="blob"></div>
+    <div id="blob2"></div>
+    <div id="blur"></div>
+    <header>
+        <a class="logo" href="https://arwindpianist.wordpress.com/">
+            <img src="./logo.png" alt="site-logo">
+        </a>
+        <h1>Barcode Generator</h1>
+        <div class="search">
+            <form action="https://www.google.com/search" method="GET" target="_blank">
+                <input type="text" name="q" placeholder="Search Google...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <br>
+            <p>Enter the barcode ID in the input field below and click the Generate button to generate the barcode.</p>
+        </div>
+        <div class="card">
+            <!-- Input field for the ID -->
+            <label for="patientId">Barcode ID:</label>
+            <input type="text" id="patientId" placeholder="Enter 8-digit ID" required>
+            <!-- Generate button -->
+            <button id="generateButton">Generate Barcode</button>
+            <!-- Container to display the barcode -->
+            <img id="barcodeContainer" hidden>            
+        </div>
+        <div class="other">
+            <!-- My Other Projects button -->
+            <button id="otherProjectsButton">My Other Projects</button>
+        </div>
+    </main>
+
+    <!-- JavaScript to handle button click events -->
+    <script>
+    // Function to handle Generate button click
+    document.getElementById("generateButton").addEventListener("click", function() {
+        // Get the patient ID from the input field
+        const patientId = document.getElementById("patientId").value;
+        
+        // Generate the barcode using JsBarcode library
+        JsBarcode("#barcodeContainer", patientId, {
+            format: "CODE128",
+            displayValue: true
+        });
+        document.getElementById("barcodeContainer").removeAttribute("hidden");
+    });
+
+    // Function to handle My Other Projects button click
+    document.getElementById("otherProjectsButton").addEventListener("click", function() {
+        // Redirect to another webpage (replace 'otherProjects.html' with the desired URL)
+        window.location.href = "https://arwindpianist.github.io/";
+    });
+
+
+    </script>
+</body>
+<script src="./script.js"></script>
+</html>
