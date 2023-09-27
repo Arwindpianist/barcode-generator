@@ -14,7 +14,6 @@ To get started with the demo, follow these simple steps:
 
 2. Explore the interactive features to understand how the Barcode Generator script functions.
 
-3. View the generated barcodes and see how they are arranged into A4-sized sheets.
 
 ## Customization
 
