@@ -1,6 +1,6 @@
 # Barcode Generator
 
-This repository contains a Python script to generate barcodes from patient IDs stored in an Excel sheet and another script to arrange these barcodes into A4-sized sheets for easy printing.
+This repository contains a Python script to generate barcodes from IDs stored in an Excel sheet and another script to arrange these barcodes into A4-sized sheets for easy printing.
 
 ## Prerequisites
 
